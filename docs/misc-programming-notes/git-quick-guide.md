@@ -39,7 +39,7 @@ git diff main origin/main # press q to quit viewer
 
 See updates and merge with local files:
 ```
-git merge origin/main
+git pull origin/main
 ```
 
 ## Troubleshooting

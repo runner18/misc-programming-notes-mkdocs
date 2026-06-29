@@ -34,9 +34,6 @@ plugins:
 ```
 
 ### Initialize mkdocs project as git repository
-Initialize as new GitHub repo. Do NOT upload to GitHub yet.  
-See git-quick-guide for help.
-
 Create a ".gitignore" file, place the following text inside:
 ```
 # MkDocs generated site
@@ -55,13 +52,26 @@ env/
 
 ```
 
+Initialize local mkdocs project as git repository.
+Create new GitHub repo and push local mkdocs project to said GitHub repo.
+See git-quick-guide for help.
+
 ### Set up GitHub deployment
-Push local mkdocs contents to empty GitHub repository. See git-quick-guide.
-
-
 In the terminal, run:
 ```
 mkdocs gh-deploy
 ```
 
 ### add bat file to deploy to Github
+The .bat file should contain the following:
+```
+set /p "message=Enter Commit Message:"
+mkdocs build
+git add .
+git commit --message "%message%"
+git push
+mkdocs gh-deploy
+pause
+```
+
+This should make it easier to commit/push git, and build/deploy the website.
