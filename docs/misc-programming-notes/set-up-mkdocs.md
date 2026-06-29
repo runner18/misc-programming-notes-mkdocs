@@ -56,13 +56,62 @@ Initialize local mkdocs project as git repository.
 Create new GitHub repo and push local mkdocs project to said GitHub repo.
 See git-quick-guide for help.
 
-### Set up GitHub deployment
+### (CURRENT) Make GitHub auto-create website
+Enable pages on GitHub
+
+In your local repo, add
+```
+.github\workflows\main.yml
+```
+
+Add the following to main.yml:
+```
+name: Publish docs via GitHub Pages
+on: 
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run : |
+          pip install mkdocs-awesome-nav
+          pip install mkdocs-material
+
+      - name: Deploy to GitHub Pages
+        run: mkdocs gh-deploy --force
+```
+
+### Add material theme if you want
+```yml
+site_name: misc-programming-notes-mkdocs
+plugins:
+  - search
+  - awesome-nav
+theme:
+  name: material
+```
+
+## Archive
+### (OUTDATED) Set up GitHub deployment
 In the terminal, run:
 ```
 mkdocs gh-deploy
 ```
 
-### add bat file to deploy to Github
+### (OUTDATED) add bat file to deploy to Github
 The .bat file should contain the following:
 ```
 set /p "message=Enter Commit Message:"
