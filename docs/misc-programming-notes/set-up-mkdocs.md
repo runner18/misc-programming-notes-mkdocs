@@ -56,7 +56,7 @@ Initialize local mkdocs project as git repository.
 Create new GitHub repo and push local mkdocs project to said GitHub repo.
 See git-quick-guide for help.
 
-### (CURRENT) Make GitHub auto-create website
+### Option 1: Make GitHub auto-create website
 Enable pages on GitHub
 
 In your local repo, add
@@ -94,24 +94,14 @@ jobs:
         run: mkdocs gh-deploy --force
 ```
 
-### Add material theme if you want
-```yml
-site_name: misc-programming-notes-mkdocs
-plugins:
-  - search
-  - awesome-nav
-theme:
-  name: material
-```
+You will still have to stage commit, and push.
 
-## Archive
-### (OUTDATED) Set up GitHub deployment
+### Option 2: Set up GitHub deployment
 In the terminal, run:
 ```
 mkdocs gh-deploy
 ```
-
-### (OUTDATED) add bat file to deploy to Github
+Add bat file to help deploy to GitHub.
 The .bat file should contain the following:
 ```
 set /p "message=Enter Commit Message:"
@@ -124,3 +114,13 @@ pause
 ```
 
 This should make it easier to commit/push git, and build/deploy the website.
+
+### Add material theme if you want
+```yml
+site_name: misc-programming-notes-mkdocs
+plugins:
+  - search
+  - awesome-nav
+theme:
+  name: material
+```
