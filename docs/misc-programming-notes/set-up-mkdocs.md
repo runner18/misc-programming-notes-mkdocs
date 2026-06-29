@@ -34,9 +34,8 @@ plugins:
 ```
 
 ### Initialize mkdocs project as git repository
-Initialize an empty repository on your local computer.
+Initialize as new GitHub repo. Do NOT upload to GitHub yet.  
 See git-quick-guide for help.
-Do NOT upload to GitHub yet.
 
 Create a ".gitignore" file, place the following text inside:
 ```
@@ -56,10 +55,8 @@ env/
 
 ```
 
-
-
 ### Set up GitHub deployment
-First, login to GitHub and create an empty repository.
+Push local mkdocs contents to empty GitHub repository. See git-quick-guide.
 
 
 In the terminal, run:
