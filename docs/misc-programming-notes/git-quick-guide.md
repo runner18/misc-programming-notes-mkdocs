@@ -20,6 +20,8 @@ git pull origin main --allow-unrelated-histories
 git push -u origin main
 ```
 
+Create .gitignore file if there is stuff in your repo that you do NOT want uploaded to GitHub.
+
 ## Routine push to GitHub
 ```
 git add .
