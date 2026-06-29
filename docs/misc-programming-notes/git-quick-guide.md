@@ -14,10 +14,35 @@ git remote add origin github_repo_url
 git push -u origin main
 ```
 
+If the git push doesn't work, it's probably because the GitHub repo already has stuff in it. Run these to fix:
+```
+git pull origin main --allow-unrelated-histories
+git push -u origin main
+```
+
 ## Routine push to GitHub
 ```
 git add .
 git commit -m "commit message goes here"
 
 git push
+```
+## Get updates from GitHub
+See updates without touching local files:
+```
+git fetch origin
+git log main..origin/main
+git diff main origin/main # press q to quit viewer
+```
+
+See updates and merge with local files:
+```
+git merge origin/main
+```
+
+## Troubleshooting
+
+### refusing to merge unrelated histories
+```
+git pull origin main --allow-unrelated-histories
 ```
