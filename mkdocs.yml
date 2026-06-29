@@ -2,3 +2,5 @@ site_name: misc-programming-notes-mkdocs
 plugins:
   - search
   - awesome-nav
+theme:
+  name: material
