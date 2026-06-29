@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "62dc0ef6e0952af6",
+        "id": "b74b81e2d31afbee",
         "type": "tabs",
         "children": [
           {
-            "id": "fe392979a69f1f53",
+            "id": "04bc9593d12c0f37",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "docs/misc-programming-notes/set-up-mkdocs.md",
-                "bFile": "docs/misc-programming-notes/set-up-mkdocs.md",
-                "aRef": ""
+                "file": "docs/misc-programming-notes/set-up-mkdocs.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: set-up-mkdocs  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "set-up-mkdocs"
             }
           }
         ]
@@ -194,9 +194,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fe392979a69f1f53",
+  "active": "04bc9593d12c0f37",
   "lastOpenFiles": [
-    "docs/misc-programming-notes/set-up-mkdocs.md",
-    "docs/misc-programming-notes/git-quick-guide.md"
+    "docs/misc-programming-notes/github-pipeline.md",
+    "docs/misc-programming-notes/git-quick-guide.md",
+    "docs/misc-programming-notes/set-up-mkdocs.md"
   ]
 }
