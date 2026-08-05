@@ -96,6 +96,12 @@ jobs:
 
 You will still have to stage commit, and push.
 
+You may need to do this from the GitHub website by going to the actions tab and creating a workflow from scratch.
+
+Some notes:
+- the "workflow_dispatch" lets you manually trigger a website build from GitHub
+- it installs mkdocs-material if you want it, maybe not necessary though
+
 ### Option 2: Set up GitHub deployment
 In the terminal, run:
 ```
