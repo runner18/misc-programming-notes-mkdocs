@@ -48,3 +48,8 @@ git pull origin/main
 ```
 git pull origin main --allow-unrelated-histories
 ```
+
+### src refspec main does not match any
+Make sure your folder actually has stuff in it
+### failed to push some refs to remote
+Make sure your folder actually has stuff in it

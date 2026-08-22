@@ -2,10 +2,16 @@
 
 
 ### Install Python
-Look up how to install Python then install Python :) sorry i'm lazy :)
+If you're using Windows, go to Settings > Advanced App Settings > App execution aliases and disable "App installer" for python and python 3. (Windows is trying to get in the way I guess.)
 
+Download python's installer from python's website
+In the installer, add python.exe to PATH
 ### Install pip
-pip is like a store for python you may need to install it to install mkdocs i forget
+pip is like a store for python 
+python should come with pip already but if it doesn't open the command prompts and try
+```
+py -m ensurepip --upgrade
+```
 
 ### Install mkdocs
 Install mkdocs
